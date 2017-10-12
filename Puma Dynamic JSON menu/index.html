@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Buy Sport T-Shirt,Running Shoes..</title>
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="Assets/StyleSheets/font-awesome.min.css">
+	<link rel="stylesheet" href="Assets/StyleSheets/main.css">
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/menuControl.js"></script>
+	<script src="js/menuFactory.js"></script>
+</head>
+<body ng-app="myApp" ng-controller='menuController'> 
+	<div id="container">
+	<div class="logo">
+		<img src="Assets/Images/logo2.png" alt="logo">
+	</div>
+	 <header id="header">
+		 <div id="top-bar">
+           <div class="topbar_content right">
+            <ul class="clearfix">
+				<li><a href="#">Email Sign Up</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Find a Store</a></li>
+                <li><a href="#">Sign In</a></li>
+				<li><a href="#"> </a></li>
+			<!--<a href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+				<a href="#">India</a><div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true"></div>-->
+            </ul>
+        </div>
+      </div>
+      <nav id="main-nav">
+            <ul class="nav navbar-nav">
+				<li class='submenus' ng-repeat='submenu in menu'><a href="#">{{submenu.name}}</a>
+               <div class='subdiv'>
+                   <div class='catdiv' ng-repeat='category in submenu.categoryList'>{{category.name}}
+                   <ul>
+                       <li ng-repeat='item in category.itemList'><a href="{{item.url}}">{{item.name}}</a></li>
+                   </ul></div>
+               </div>
+                </li>
+                
+            </ul>
+            <div class="search-bar"><input type="search" class="inpt" placeholder ="I am looking for"><a href=""><button class="btn">
+            	<span class="glyphicon glyphicon-search"></span>
+            </button></a>
+            <span class="cart">cart</span>
+            </div>
+        </nav>
+	</header>
+
+	<!--{{menu}}-->
+</body>
+</html>
