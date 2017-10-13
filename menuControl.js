@@ -1,4 +1,4 @@
-app.controller("menuController",($scope,menuFactory)=>{
+app.controller("menuController",function($scope,menuFactory){
    var promise = menuFactory.getMenu(); 
     promise.then((data)=>{
         var menuData = data;
