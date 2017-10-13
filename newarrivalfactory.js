@@ -1,4 +1,4 @@
-app.factory("myfactory",($http,$q)=>{
+app.factory("myfactory",function($http,$q){
 	var object = {
 		getNew(){
 			var url ="https://raw.githubusercontent.com/Mukul001/puma.json/master/puma.json" ;
