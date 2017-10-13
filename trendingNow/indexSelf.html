@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="angular.min.js"></script>
+    <script src="trendingapp.js"></script>
+    <script src="trendingcontroller.js"></script>
+    <script src="trendingfractory.js"></script>
+    <link rel="stylesheet" href="trendingCSS.css">
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-app="trendApp" ng-controller="trendingCtrl">
+    <div id="trendingNow" class="module-trending-inline">
+        <div align="center">
+            <h3 class="module-header h5">TRENDING NOW</h3>
+        </div>
+        <div id="trending" align="center" class="divAlign">
+            <div class="subdivAlign" ng-repeat="trend in trendingData | filter: {'status':'Y'}">
+
+                <div style="height: 289.81px;width: 448.75px;overflow: hidden;">
+                    <img ng-src="{{trend.pictureurl}} " class="trendImage"><br>
+                </div>
+                {{trend.desc}}<br>
+                <span ng-repeat="link in trend.links | filter: {'status':'Y'}"><a href='{{link.url}}' style="color: black">{{link.id}}&ensp;;</a></span>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
