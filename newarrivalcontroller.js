@@ -1,4 +1,4 @@
-app.controller("newctrl",($scope,myfactory)=>{
+app.controller("newctrl",function($scope,myfactory){
 		var promise  = myfactory.getNew();
 		promise.then(function(data){
             $scope.shoes = data.data.Shoes;
