@@ -1,4 +1,4 @@
-app.factory("menuFactory",($http,$q)=>{
+app.factory("menuFactory",function($http,$q){
   
     var obj = {
         getMenu(){
