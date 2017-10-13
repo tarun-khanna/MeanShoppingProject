@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="libs/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/featureFactory.js"></script>
+    <script src="js/featureController.js"></script>
+</head>
+
+<body ng-app="featuresApp">
+    <div ng-controller="featureController">
+        <ul>
+            <li ng-repeat="feature in featureData">
+                <img src='{{feature.url}}'>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
