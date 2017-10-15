@@ -1,0 +1,51 @@
+  <ul class="nav navbar-nav">
+            
+             <li class="dropdown" ng-repeat="submenu in menu"><a href="#">{{submenu.name}}</a>
+               <div class="dropdown-content">
+                   <div class="subdiv" ng-repeat="category in submenu.categoryList">{{category.name}}
+                   <ul class="column">
+                       <li ng-repeat="item in category.itemList"><a href="{{item.url}}">{{item.name}}</a></li>
+                   </ul></div>
+               </div>
+               </li>
+           
+            </ul> 
+......................
+CSS
+
+
+#main-nav ul li:hover .dropdown-content{
+  display: block;
+	background-color: #fff;
+}
+#main-nav .column {
+  /*float: left;*/
+  width: 33.33%;
+  background-color: #fff;
+/*  height: 250px;*/
+}
+
+#main-nav .dropdown .column a {
+  float: none;
+  color: black;
+  padding: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+}
+#main-nav .subdiv:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#main-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	width: 100%;
+    z-index: 1;
+	opacity: .93;
+	
+}
