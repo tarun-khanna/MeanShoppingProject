@@ -3,6 +3,9 @@
     padding: 0px;
     margin: 0px;
 }
+.findstore{
+    position: relative;
+}
 @font-face{
 		font-family:'Primary-Medium';
 		src:url('https://d21kp9itql721v.cloudfront.net/cdn/634234/skin/frontend/rwd/default/fonts/Geogrotesque-Medium/Geogrotesque-Medium_gdi.eot');
