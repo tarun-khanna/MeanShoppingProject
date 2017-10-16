@@ -1,0 +1,13 @@
+.social_icon{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: firebrick;
+}
+.Gender_List, .Cust_Service_List, .About_Company_List{
+    color: darkgray;
+}
+
+.Gender_List:hover, .Cust_Service_List:hover, .About_Company_List:hover{
+    color: firebrick;
+    text-decoration: none;
+}
