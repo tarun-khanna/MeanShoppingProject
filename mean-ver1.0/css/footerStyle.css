@@ -1,3 +1,6 @@
+.container-fluid{
+     border-top:1px dotted #ccc; 
+}
 .social_icon{
     font-size: 30px;
     margin-bottom: 20px;
